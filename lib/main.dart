@@ -11,19 +11,17 @@ class SusiApp extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       debugShowCheckedModeBanner: false,
-      home: PaginaInicio(),
+      home: Casita(),
     ); //Fin MaterialApp
   } //Fin de widget
-} //fin de MyifApp
-
-class PaginaInicio extends StatefulWidget {
+} //fin class susiapp
+class Casita extends StatefulWidget {
   @override
-  _PaginaInicioState createState() {
-    return _PaginaInicioState();
-  }
-} //Fin Statefulwidget
-
-class _PaginaInicioState extends State<PaginaInicio> {
+  _CasitaState createState() {
+    return _CasitaState();
+  }// fin casita
+} //Fin statefulwidget
+class _CasitaState extends State<Casita> {
   String _value;
   @override
   Widget build(BuildContext context) {
@@ -31,17 +29,13 @@ class _PaginaInicioState extends State<PaginaInicio> {
       appBar: AppBar(
         title: Text('Aparta tu cita'),
       ), //fin de App Bar
-
       body: Padding(
-        padding: const EdgeInsets.all(1.5), //pading del body espacio blanco
-
+        padding: const EdgeInsets.all(1.5), 
         child: Container(
-          //contenedor gris
           color: Colors.white,
           height: 2000,
           width: 2000,
-          padding: const EdgeInsets.all(10), //pading del body espacio blanco
-
+          padding: const EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -57,7 +51,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
                   ), //fin de border
                 ), //fin de el decoration box
               ), //fin de el container
-
               SizedBox(height: 5),
               Container(
                 padding: EdgeInsets.only(top: 5, bottom: 5),
@@ -70,9 +63,8 @@ class _PaginaInicioState extends State<PaginaInicio> {
                       borderSide: BorderSide(
                         color: Colors.teal[300],
                         width: 2.0,
-                      ), //fin de border side
-                    ), //fin de enable border
-                    //! Change the Focused Border
+                      ), 
+                    ), 
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.amber,
@@ -82,11 +74,9 @@ class _PaginaInicioState extends State<PaginaInicio> {
                   ), //fin de inoutdecoration
                 ), //fin de TextField
               ), //fin de container
-
               Container(
                 padding: EdgeInsets.only(top: 5, bottom: 5),
                 width: 572,
-
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'Nombre del cliente',
@@ -96,7 +86,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
                         width: 2.0,
                       ), //fin de border side
                     ), //fin de enable border
-                    //! Change the Focused Border
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.amber,
@@ -105,14 +94,11 @@ class _PaginaInicioState extends State<PaginaInicio> {
                     ), //fin de outlineInput border
                   ), //fin de inputdecoration
                 ), //fin de TextField
-              ), //fin de container grupo especialidad
-
+              ), //fin de container
               SizedBox(height: 10),
-
               Container(
                 padding: EdgeInsets.only(top: 5, bottom: 5),
-                width: 572, //aqui
-
+                width: 572, 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -126,7 +112,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
                               width: 2.0,
                             ), //fin de border side
                           ), //fin de enable border
-                          //! Change the Focused Border
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.amber,
@@ -175,12 +160,10 @@ class _PaginaInicioState extends State<PaginaInicio> {
                   ], //fin de widget
                 ), //fin de row
               ), //fin de container
-
               SizedBox(height: 5),
-
               Container(
                 padding: EdgeInsets.only(top: 5, bottom: 5),
-                width: 572, //aqui
+                width: 572, 
                 height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -225,10 +208,10 @@ class _PaginaInicioState extends State<PaginaInicio> {
                   ], //fin de widget
                 ), //fin de row
               ), //fin de container colores
-            ], //fin de widget2[]
+            ], //fin de widget
           ), //fin de column
         ), //child container
-      ), //fin de body padding
-    ); //Fin Scaffold
-  } //Fin de Widget
-} //Fin _PaginaInicioState
+      ), //fin de padding
+    ); //Fin scaffold
+  } //Fin de widget
+} //Fin class
